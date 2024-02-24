@@ -57,7 +57,6 @@ sequence = mapper(sequence)
 # print(sequence)
 
 
-
 #
 # Escriba la función shuffle_and_sort que recibe la lista de tuplas entregada
 # por el mapper, y retorna una lista con el mismo contenido ordenado por la
@@ -146,7 +145,7 @@ def save_output(output_directory, sequence):
 # entregado como parámetro.
 #
 def create_marker(output_directory):
-    with open(output_directory + "/_SUCCES","w") as file:
+    with open(output_directory + "/_SUCCESS","w") as file:
         file.write("")
     
 
