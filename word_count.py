@@ -47,7 +47,7 @@ def mapper(sequence):
         words = text.split() # separa las palabras y las aloja en un alista denominada words
         for word in words: # recorre la lista words
             word = word.replace(",","")
-            word = word.replace(",","")
+            word = word.replace(".","")
             word = word.lower()
             new_sequence.append ((word,1)) # Agrega la dupla en la lista new_sequence 
     return new_sequence # retorna la lista
@@ -93,12 +93,12 @@ def reducer(sequence):
     diccionario = {}
     for key, value  in sequence:
         if key not in diccionario.keys():
-            diccionario[key] = []
-        diccionario[key].append(value)
+            diccionario[key] = 0
+        diccionario[key] += value
 
     new_sequence =[]
     for key, value in diccionario.items():
-        tupla= (key, sum(value))
+        tupla= (key,value)
         new_sequence.append(tupla)
 
     return new_sequence
