@@ -57,6 +57,7 @@ sequence = mapper(sequence)
 # print(sequence)
 
 
+
 #
 # Escriba la función shuffle_and_sort que recibe la lista de tuplas entregada
 # por el mapper, y retorna una lista con el mismo contenido ordenado por la
