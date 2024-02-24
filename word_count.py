@@ -134,7 +134,7 @@ def create_ouptput_directory(output_directory):
 #
 
 def save_output(output_directory, sequence):
-    with open(output_directory + "/part-0000", "w") as file:
+    with open(output_directory + "/part-00000", "w") as file:
         for key, value in sequence:
             file.write(f"{key}\t{value}\n")
    
